@@ -17,9 +17,11 @@ import {
   Tours,
 } from "./components/utils/helper";
 
-import { loader as tourLoader } from "./components/pages/Tours.tsx";
-import { loader as teamsLoader } from "./components/sections/OurCrew.tsx";
-import { loader as pricingLoader } from "./components/sections/Pricing.tsx";
+import {
+  crewLoader,
+  pricingLoader,
+  toursLoader,
+} from "./components/utils/loaders";
 import { themeContext } from "./contexts/themeContext";
 
 export const queryClient = new QueryClient({
@@ -34,8 +36,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} loader={pricingLoader} />
-      <Route path="about" element={<AboutUs />} loader={teamsLoader} />
-      <Route path="tours" element={<Tours />} loader={tourLoader} />
+      <Route path="about" element={<AboutUs />} loader={crewLoader} />
+      <Route path="tours" element={<Tours />} loader={toursLoader} />
       <Route path="contact" element={<ContactUs />} />
       <Route path="*" element={<Page404 />} />
     </Route>,

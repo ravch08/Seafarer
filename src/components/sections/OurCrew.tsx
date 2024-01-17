@@ -1,16 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { number, string, z } from "zod";
 
-import { queryClient } from "../../App";
 import { getCrew } from "../utils/api";
 import { CrewItem, SectionHeading } from "../utils/helper";
-
-export const loader = () => {
-  return queryClient.fetchQuery({
-    queryKey: ["teams"],
-    queryFn: getCrew,
-  });
-};
 
 const CrewSchema = z.object({
   id: number().optional(),

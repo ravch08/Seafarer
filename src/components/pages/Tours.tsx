@@ -1,16 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { NavLink } from "react-router-dom";
 import { number, string, z } from "zod";
-import { queryClient } from "../../App";
+
 import { getTours } from "../utils/api";
 import { PageBanner, TourItem, aboutBanner } from "../utils/helper";
-
-export async function loader() {
-  return queryClient.fetchQuery({
-    queryKey: ["tours"],
-    queryFn: getTours,
-  });
-}
 
 const TourSchema = z.object({
   id: number().optional(),

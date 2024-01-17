@@ -6,13 +6,6 @@ import "swiper/css";
 import { number, string, z } from "zod";
 import { getTestimonials } from "../utils/api";
 
-// export function loader() {
-//   return queryClient.fetchQuery({
-//     queryKey: ["testimonials"],
-//     queryFn: getTestimonials,
-//   });
-// }
-
 export const TestimonialSchema = z.object({
   id: number().optional(),
   author: string().min(5, {

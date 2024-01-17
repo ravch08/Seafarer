@@ -1,16 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { number, string, z } from "zod";
-import { queryClient } from "../../App";
 import PricingItem from "../features/PricingItem";
 import SectionHeading from "../features/SectionHeading";
 import { getPricing } from "../utils/api";
-
-export const loader = () => {
-  return queryClient.fetchQuery({
-    queryKey: ["pricing"],
-    queryFn: getPricing,
-  });
-};
 
 const PricingSchema = z.object({
   id: number().optional(),
