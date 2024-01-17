@@ -9,3 +9,9 @@ export async function getPricing() {
   const data = await response.json();
   return data;
 }
+
+export async function getTestimonials() {
+  const response = await fetch(`http://localhost:3000/testimonials`);
+  const data = await response.json();
+  return data;
+}

@@ -50,5 +50,37 @@
       "listItem2": "Aenean commodo ligula eget dolor. Cum sociis Theme.",
       "listItem3": "Lorem ipsum dolor sit amet, adipiscing elit ligula"
     }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "author": "Edvand Tord",
+      "designation": "Skipper",
+      "quote": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia exercitationem aliquid quisquam reprehenderit quo nisi praesentium iste voluptatibus! Excepturi delectus laborum tempora similique sed vero porro blanditiis amet aut repellat voluptate aliquam iusto, ullam odio explicabo!"
+    },
+    {
+      "id": 2,
+      "author": "Christopher Dalas",
+      "designation": "First Captain",
+      "quote": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia exercitationem aliquid quisquam reprehenderit quo nisi praesentium iste voluptatibus! Excepturi delectus laborum tempora similique sed vero porro blanditiis amet aut repellat voluptate aliquam iusto, ullam odio explicabo!"
+    },
+    {
+      "id": 3,
+      "author": "Lukas Raine",
+      "designation": "Skipper",
+      "quote": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia exercitationem aliquid quisquam reprehenderit quo nisi praesentium iste voluptatibus! Excepturi delectus laborum tempora similique sed vero porro blanditiis amet aut repellat voluptate aliquam iusto, ullam odio explicabo!"
+    },
+    {
+      "id": 4,
+      "author": "William Jacobs",
+      "designation": "First Captain",
+      "quote": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia exercitationem aliquid quisquam reprehenderit quo nisi praesentium iste voluptatibus! Excepturi delectus laborum tempora similique sed vero porro blanditiis amet aut repellat voluptate aliquam iusto, ullam odio explicabo!"
+    },
+    {
+      "id": 5,
+      "author": "Sarah Walters",
+      "designation": "Skipper",
+      "quote": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia exercitationem aliquid quisquam reprehenderit quo nisi praesentium iste voluptatibus! Excepturi delectus laborum tempora similique sed vero porro blanditiis amet aut repellat voluptate aliquam iusto, ullam odio explicabo!"
+    }
   ]
 }
