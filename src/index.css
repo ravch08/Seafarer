@@ -39,7 +39,7 @@ p {
 }
 
 .nav-link {
-  @apply text-darkBlue-600 inline-block px-4 py-8 font-sans text-sm font-medium hover:text-primary dark:text-white;
+  @apply inline-block px-4 py-8 font-sans text-sm font-medium text-darkBlue-600 hover:text-primary dark:text-white;
 
   &.active {
     @apply font-bold text-primary;
@@ -72,4 +72,16 @@ section {
 
 .form-input {
   @apply w-full rounded-sm px-4 py-3 text-sm text-primary caret-primary outline-none placeholder:text-sm;
+}
+
+.filter-links {
+  @apply font-sans text-sm uppercase;
+
+  &.active {
+    @apply underline;
+  }
+}
+
+.tour-feature {
+  @apply px-2 py-3 text-sm text-primary;
 }

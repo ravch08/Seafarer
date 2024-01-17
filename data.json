@@ -82,5 +82,139 @@
       "designation": "Skipper",
       "quote": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia exercitationem aliquid quisquam reprehenderit quo nisi praesentium iste voluptatibus! Excepturi delectus laborum tempora similique sed vero porro blanditiis amet aut repellat voluptate aliquam iusto, ullam odio explicabo!"
     }
+  ],
+  "tours": [
+    {
+      "id": 1,
+      "guests": 9,
+      "cabins": 6,
+      "price": 123,
+      "distance": 60,
+      "type": "Yatch",
+      "name": "LUXORY SMALL COMET",
+      "imgSrc": "http://localhost:5173/src/assets/tours-01.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa cum sociis Theme natoque magnis et penatibus dis. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Etiam sit amet orci eget eros faucibus tincidunt."
+    },
+    {
+      "id": 2,
+      "guests": 6,
+      "cabins": 4,
+      "price": 114,
+      "distance": 90,
+      "type": "Yatch",
+      "name": "ODYSSEY YACHT",
+      "imgSrc": "http://localhost:5173/src/assets/tours-02.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa cum sociis Theme natoque magnis et penatibus dis. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Etiam sit amet orci eget eros faucibus tincidunt."
+    },
+    {
+      "id": 3,
+      "guests": 46,
+      "cabins": 26,
+      "price": 164,
+      "distance": 90,
+      "type": "CRUISER",
+      "name": "BAWERA CRUISER",
+      "imgSrc": "http://localhost:5173/src/assets/tours-03.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa cum sociis Theme natoque magnis et penatibus dis. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Etiam sit amet orci eget eros faucibus tincidunt."
+    },
+    {
+      "id": 4,
+      "guests": 32,
+      "cabins": 16,
+      "price": 144,
+      "distance": 100,
+      "type": "Yatch",
+      "name": "CROSS OCEAN YACHT",
+      "imgSrc": "http://localhost:5173/src/assets/tours-04.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa cum sociis Theme natoque magnis et penatibus dis. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Etiam sit amet orci eget eros faucibus tincidunt."
+    },
+    {
+      "id": 5,
+      "guests": 10,
+      "cabins": 6,
+      "price": 114,
+      "distance": 90,
+      "type": "CRUISER",
+      "name": "CAMPE CRUISER",
+      "imgSrc": "http://localhost:5173/src/assets/tours-05.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa cum sociis Theme natoque magnis et penatibus dis. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Etiam sit amet orci eget eros faucibus tincidunt."
+    },
+    {
+      "id": 6,
+      "guests": 9,
+      "cabins": 6,
+      "price": 132,
+      "distance": 80,
+      "type": "Yatch",
+      "name": "COMET YACHT",
+      "imgSrc": "http://localhost:5173/src/assets/tours-06.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa cum sociis Theme natoque magnis et penatibus dis. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Etiam sit amet orci eget eros faucibus tincidunt."
+    },
+    {
+      "id": 7,
+      "guests": 9,
+      "cabins": 6,
+      "price": 123,
+      "distance": 60,
+      "type": "Yatch",
+      "name": "LUXORY SMALL COMET",
+      "imgSrc": "http://localhost:5173/src/assets/tours-07.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa cum sociis Theme natoque magnis et penatibus dis. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Etiam sit amet orci eget eros faucibus tincidunt."
+    },
+    {
+      "id": 8,
+      "guests": 6,
+      "cabins": 4,
+      "price": 114,
+      "distance": 90,
+      "type": "Yatch",
+      "name": "ODYSSEY YACHT",
+      "imgSrc": "http://localhost:5173/src/assets/tours-08.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa cum sociis Theme natoque magnis et penatibus dis. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Etiam sit amet orci eget eros faucibus tincidunt."
+    },
+    {
+      "id": 9,
+      "guests": 46,
+      "cabins": 26,
+      "price": 164,
+      "distance": 90,
+      "type": "CRUISER",
+      "name": "BAWERA CRUISER",
+      "imgSrc": "http://localhost:5173/src/assets/tours-09.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa cum sociis Theme natoque magnis et penatibus dis. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Etiam sit amet orci eget eros faucibus tincidunt."
+    },
+    {
+      "id": 10,
+      "guests": 32,
+      "cabins": 16,
+      "price": 144,
+      "distance": 100,
+      "type": "Yatch",
+      "name": "CROSS OCEAN YACHT",
+      "imgSrc": "http://localhost:5173/src/assets/tours-10.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa cum sociis Theme natoque magnis et penatibus dis. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Etiam sit amet orci eget eros faucibus tincidunt."
+    },
+    {
+      "id": 11,
+      "guests": 10,
+      "cabins": 6,
+      "price": 114,
+      "distance": 90,
+      "type": "CRUISER",
+      "name": "CAMPE CRUISER",
+      "imgSrc": "http://localhost:5173/src/assets/tours-11.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa cum sociis Theme natoque magnis et penatibus dis. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Etiam sit amet orci eget eros faucibus tincidunt."
+    },
+    {
+      "id": 12,
+      "guests": 9,
+      "cabins": 6,
+      "price": 132,
+      "distance": 80,
+      "type": "Yatch",
+      "name": "COMET YACHT",
+      "imgSrc": "http://localhost:5173/src/assets/tours-12.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa cum sociis Theme natoque magnis et penatibus dis. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Etiam sit amet orci eget eros faucibus tincidunt."
+    }
   ]
 }

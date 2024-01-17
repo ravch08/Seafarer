@@ -17,6 +17,7 @@ import {
   Tours,
 } from "./components/utils/helper";
 
+import { loader as tourLoader } from "./components/pages/Tours.tsx";
 import { loader as teamsLoader } from "./components/sections/OurCrew.tsx";
 import { loader as pricingLoader } from "./components/sections/Pricing.tsx";
 import { themeContext } from "./contexts/themeContext";
@@ -34,7 +35,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} loader={pricingLoader} />
       <Route path="about" element={<AboutUs />} loader={teamsLoader} />
-      <Route path="tours" element={<Tours />} />
+      <Route path="tours" element={<Tours />} loader={tourLoader} />
       <Route path="contact" element={<ContactUs />} />
       <Route path="*" element={<Page404 />} />
     </Route>,

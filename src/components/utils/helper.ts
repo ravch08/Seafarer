@@ -19,10 +19,12 @@ export { default as team2 } from "../../assets/team-2.jpg";
 export { default as team3 } from "../../assets/team-3.jpg";
 export { default as team4 } from "../../assets/team-4.jpg";
 
+export { default as ContactForm } from "../features/ContactForm.tsx";
 export { default as CrewItem } from "../features/CrewItem.tsx";
 export { default as PricingItem } from "../features/PricingItem.tsx";
 export { default as SectionHeading } from "../features/SectionHeading.tsx";
 export { default as SocailIcons } from "../features/SocailIcons.tsx";
+export { default as TourItem } from "../features/TourItem.tsx";
 
 export { default as About } from "../sections/About.tsx";
 export { default as Banner } from "../sections/Banner.tsx";

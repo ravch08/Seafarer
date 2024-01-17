@@ -15,3 +15,9 @@ export async function getTestimonials() {
   const data = await response.json();
   return data;
 }
+
+export async function getTours() {
+  const response = await fetch(`http://localhost:3000/tours`);
+  const data = await response.json();
+  return data;
+}
