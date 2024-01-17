@@ -1,0 +1,54 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "name": "CRISTOFER DALAS",
+      "designation": "First Captain",
+      "imgSrc": "http://localhost:5173/src/assets/team-1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "STEPHEN WILSON",
+      "designation": "Skipper",
+      "imgSrc": "http://localhost:5173/src/assets/team-2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "ZACHARY BARNETT",
+      "designation": "Skipper",
+      "imgSrc": "http://localhost:5173/src/assets/team-3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "JAMES DELGADO",
+      "designation": "First Captain",
+      "imgSrc": "http://localhost:5173/src/assets/team-4.jpg"
+    }
+  ],
+  "pricing": [
+    {
+      "id": 1,
+      "price": 1200,
+      "serviceType": "Standard",
+      "listItem1": "Lorem ipsum dolor sit amet, adipiscing elit ligula",
+      "listItem2": "Aenean commodo ligula eget dolor. Cum sociis Theme.",
+      "listItem3": "Lorem ipsum dolor sit amet, adipiscing elit ligula"
+    },
+    {
+      "id": 2,
+      "price": 2300,
+      "serviceType": "Deluxe",
+      "listItem1": "Lorem ipsum dolor sit amet, adipiscing elit ligula",
+      "listItem2": "Aenean commodo ligula eget dolor. Cum sociis Theme.",
+      "listItem3": "Lorem ipsum dolor sit amet, adipiscing elit ligula"
+    },
+    {
+      "id": 3,
+      "price": 1600,
+      "serviceType": "Premium",
+      "listItem1": "Lorem ipsum dolor sit amet, adipiscing elit ligula",
+      "listItem2": "Aenean commodo ligula eget dolor. Cum sociis Theme.",
+      "listItem3": "Lorem ipsum dolor sit amet, adipiscing elit ligula"
+    }
+  ]
+}

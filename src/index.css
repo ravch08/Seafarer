@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;700&family=Inconsolata:wght@200;400;800&family=Roboto:wght@100;300;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply transition-colors duration-100 ease-in-out;
+}
+
+body::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: hsl(0, 0%, 93%);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: hsl(35, 30%, 64%);
+}
+
+@supports (scrollbar-color: hsl(35, 30%, 64%) hsl(0, 0%, 93%)) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(35, 30%, 64%) hsl(0, 0%, 93%);
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-serif;
+}
+
+p {
+  @apply font-sans leading-7 tracking-wide text-gray-500;
+}
+
+.nav-link {
+  @apply inline-block px-4 py-8 font-sans text-sm font-medium text-darkBlue hover:text-primary dark:text-white;
+
+  &.active {
+    @apply font-bold text-primary;
+  }
+}
+
+.btn-primary {
+  @apply mt-8 inline-block border border-primary bg-primary px-12 py-4 text-sm uppercase text-white hover:bg-transparent hover:text-primary;
+}
+
+section {
+  @apply py-20;
+}
+
+.font-h2 {
+  @apply py-4 font-serif text-5xl font-semibold;
+}
+
+.sticky {
+  @apply fixed left-0 top-0 z-20 w-full p-2 shadow-md transition-all duration-300 ease-in-out;
+}
+
+.ftr-link {
+  @apply text-sm text-white hover:text-primary;
+}
+
+.ftr-heading {
+  @apply mb-4 font-serif text-lg  font-semibold uppercase tracking-wider text-primary;
+}
+
+.form-input {
+  @apply w-full rounded-sm px-4 py-3 text-sm text-primary caret-primary outline-none placeholder:text-sm;
+}
