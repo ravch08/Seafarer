@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors: {
         primary: "#bfa888",
-        darkBlue: "#021527",
+        "darkBlue-600": "#021527",
+        "darkBlue-400": "#002243",
       },
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
@@ -13,7 +14,8 @@ module.exports = {
         monospace: ["Inconsolata", "monospace"],
       },
       backgroundImage: {
-        "mid-banner": "url('./src/assets/bg-banner.jpg')",
+        "midBanner-01": "url('./src/assets/bg-banner-01.jpg')",
+        "midBanner-02": "url('./src/assets/bg-banner-02.jpg')",
       },
     },
   },

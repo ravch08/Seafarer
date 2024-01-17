@@ -4,7 +4,7 @@ const MidBanner = () => {
   return (
     <section
       aria-labelledby="Section Banner"
-      className="bg-mid-banner my-12 flex h-[400px] items-center"
+      className="bg-midBanner-02 my-12 flex h-[400px] items-center"
     >
       <div className="container mx-auto w-2/3 text-center">
         <h2 className="font-h2 text-white">DISCOVER NEW YACHTS</h2>

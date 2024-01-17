@@ -3,7 +3,7 @@ import { SocailIcons, logoLight } from "../utils/helper";
 
 const Footer = () => {
   return (
-    <footer className="bg-darkBlue py-20">
+    <footer className="bg-darkBlue-600 py-20">
       <div className="container mx-auto flex items-start justify-between gap-12">
         <div className="flex w-1/4 flex-col items-start gap-4">
           <Link to="/">

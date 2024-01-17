@@ -47,7 +47,7 @@ const Pricing = () => {
           description="Theme natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etia rmrhoncustema ecenas tempus, tellus eget..."
         />
 
-        <div className="flex items-center justify-center gap-12">
+        <div className="mt-16 flex items-center justify-center gap-12">
           {pricing?.map((price: PricingProps) => (
             <PricingItem
               key={price.id}

@@ -6,31 +6,34 @@ import { logoDark, logoLight } from "../utils/helper";
 
 const Header = () => {
   const [sticky, setSticky] = useState("");
-  const { darkTheme, setDarkTheme } = useContext(themeContext);
-
-  const handleSticky = () => {
-    const stickyClass = window.scrollY > 150 ? "sticky" : "";
-    setSticky(stickyClass);
-  };
-
-  const toggleTheme = () => setDarkTheme((theme: boolean) => !theme);
+  const contextValue = useContext(themeContext);
 
   useEffect(() => {
     window.addEventListener("scroll", handleSticky);
     () => window.removeEventListener("scroll", handleSticky);
   }, []);
 
+  if (!contextValue) return <div>Error: themeContext value is null</div>;
+
+  const { darkTheme, setDarkTheme } = contextValue;
+  const toggleTheme = () => setDarkTheme((theme: boolean) => !theme);
+
+  const handleSticky = () => {
+    const stickyClass = window.scrollY > 150 ? "sticky" : "";
+    setSticky(stickyClass);
+  };
+
   const stickyClass = sticky ? "sticky" : "";
-  const headerClass = darkTheme ? "dark bg-darkBlue" : "bg-white";
+  const headerClass = darkTheme ? "dark bg-darkBlue-600" : "bg-white";
 
   return (
     <header className={`${headerClass} ${stickyClass}`}>
       <div className="container mx-auto flex items-center justify-between gap-6">
         <Link to="/">
           <img
-            src={darkTheme ? logoLight : logoDark}
             alt="Seafarer"
             className="w-32"
+            src={darkTheme ? logoLight : logoDark}
           />
         </Link>
         <nav

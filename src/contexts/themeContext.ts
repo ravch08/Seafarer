@@ -1,3 +1,8 @@
 import { createContext } from "react";
 
-export const themeContext = createContext({});
+export type themeContextProps = {
+  darkTheme: boolean;
+  setDarkTheme: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export const themeContext = createContext<themeContextProps | null>(null);

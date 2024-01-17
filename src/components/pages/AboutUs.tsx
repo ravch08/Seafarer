@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { themeContext } from "../../contexts/themeContext";
 import {
   About,
   OurCrew,
@@ -7,8 +9,14 @@ import {
 } from "../utils/helper";
 
 const AboutUs = () => {
+  const contextValue = useContext(themeContext);
+
+  if (!contextValue) return <div>Error: themeContext value is null</div>;
+
+  const { darkTheme } = contextValue;
+
   return (
-    <main>
+    <main className={darkTheme ? "bg-darkBlue-400" : "bg-white"}>
       <PageBanner
         page="About Us"
         imgSrc={aboutBanner}

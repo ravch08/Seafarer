@@ -39,7 +39,7 @@ p {
 }
 
 .nav-link {
-  @apply inline-block px-4 py-8 font-sans text-sm font-medium text-darkBlue hover:text-primary dark:text-white;
+  @apply text-darkBlue-600 inline-block px-4 py-8 font-sans text-sm font-medium hover:text-primary dark:text-white;
 
   &.active {
     @apply font-bold text-primary;
