@@ -6,7 +6,7 @@ const TourItem = (props: TourProps) => {
     props;
 
   return (
-    <div className="w-[28%]">
+    <div className="mb-8 w-[25%]">
       <figure className="border border-primary p-2">
         <img src={imgSrc} alt={name} />
       </figure>
@@ -17,7 +17,7 @@ const TourItem = (props: TourProps) => {
         </Link>
         <p className="line-clamp-4 text-sm">{description}</p>
       </div>
-      <ul className="flex items-center gap-2 border-t border-gray-200">
+      <ul className="flex items-center gap-2 border-y border-gray-200">
         <li className="tour-feature font-semibold uppercase">{type}</li>
         <li className="tour-feature ">|</li>
         <li className="tour-feature uppercase">{guests} guests</li>

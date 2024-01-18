@@ -44,42 +44,42 @@ const Clients = () => {
             },
           }}
         >
-          <SwiperSlide>
+          <SwiperSlide className="flex items-center justify-center">
             <img
               src={client1}
               alt="client"
               className="transition-transform duration-300 ease-in-out hover:-translate-y-2"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex items-center justify-center">
             <img
               src={client2}
               alt="client"
               className="transition-transform duration-300 ease-in-out hover:-translate-y-2"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex items-center justify-center">
             <img
               src={client3}
               alt="client"
               className="transition-transform duration-300 ease-in-out hover:-translate-y-2"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex items-center justify-center">
             <img
               src={client4}
               alt="client"
               className="transition-transform duration-300 ease-in-out hover:-translate-y-2"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex items-center justify-center">
             <img
               src={client5}
               alt="client"
               className="transition-transform duration-300 ease-in-out hover:-translate-y-2"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex items-center justify-center">
             <img
               src={client6}
               alt="client"

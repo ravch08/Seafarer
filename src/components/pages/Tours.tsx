@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { NavLink } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { number, string, z } from "zod";
 
 import { getTours } from "../utils/api";
@@ -20,10 +20,55 @@ const TourSchema = z.object({
 export type TourProps = z.infer<typeof TourSchema>;
 
 const Tours = () => {
+  const [params, setParams] = useSearchParams();
+
   const { data, status } = useQuery({
     queryKey: ["tours"],
     queryFn: getTours,
   });
+
+  const lowToHighData = data
+    ?.slice()
+    .sort((a: TourProps, b: TourProps) => a.price - b.price);
+
+  const highToLowData = data
+    ?.slice()
+    .sort((a: TourProps, b: TourProps) => b.price - a.price);
+
+  const sortedAZData = data
+    .slice()
+    .sort((a: TourProps, b: TourProps) => a.name.localeCompare(b.name));
+
+  let filteredData;
+  const filterType = params.get("type");
+
+  switch (filterType) {
+    case "high-low":
+      filteredData = highToLowData;
+      break;
+    case "low-high":
+      filteredData = lowToHighData;
+      break;
+    case "ascending":
+      filteredData = sortedAZData;
+      break;
+    case "all":
+      filteredData = data;
+      break;
+    case "yatch":
+      filteredData = data.filter(
+        (item: TourProps) => item.type.toLowerCase() === "yatch",
+      );
+      break;
+    case "cruiser":
+      filteredData = data.filter(
+        (item: TourProps) => item.type.toLowerCase() === "cruiser",
+      );
+      break;
+    default:
+      filteredData = data;
+      break;
+  }
 
   return (
     <main>
@@ -35,28 +80,66 @@ const Tours = () => {
 
       <section
         aria-labelledby="Filters"
-        className="border-b border-gray-100 px-0 py-4"
+        className="border-b border-gray-100 p-0"
       >
-        <div className="container mx-auto flex items-center gap-12">
-          <NavLink to="#!" className="filter-links" end>
+        <div className="container mx-auto flex items-center gap-2">
+          <button
+            className={
+              filterType === null ? "filter-links active" : "filter-links"
+            }
+            onClick={() => setParams({})}
+          >
+            ALL
+          </button>
+          <button
+            className={
+              filterType === "yatch" ? "filter-links active" : "filter-links"
+            }
+            onClick={() => setParams({ type: "yatch" })}
+          >
+            YATCH
+          </button>
+          <button
+            className={
+              filterType === "cruiser" ? "filter-links active" : "filter-links"
+            }
+            onClick={() => setParams({ type: "cruiser" })}
+          >
+            CRUISER
+          </button>
+          <button
+            className={
+              filterType === "ascending"
+                ? "filter-links active"
+                : "filter-links"
+            }
+            onClick={() => setParams({ type: "ascending" })}
+          >
             Name (A - Z)
-          </NavLink>
-          <NavLink to="#!" className="filter-links" end>
-            Type
-          </NavLink>
-          <NavLink to="#!" className="filter-links" end>
+          </button>
+          <button
+            className={
+              filterType === "high-low" ? "filter-links active" : "filter-links"
+            }
+            onClick={() => setParams({ type: "high-low" })}
+          >
             Price High to Low
-          </NavLink>
-          <NavLink to="#!" className="filter-links" end>
+          </button>
+          <button
+            className={
+              filterType === "low-high" ? "filter-links active" : "filter-links"
+            }
+            onClick={() => setParams({ type: "low-high" })}
+          >
             Price Low to High
-          </NavLink>
+          </button>
         </div>
       </section>
 
       <section aria-labelledby="tours">
         <div className="container mx-auto flex flex-wrap items-center justify-between gap-8">
           {status === "success"
-            ? data?.map((tour: TourProps) => (
+            ? filteredData?.map((tour: TourProps) => (
                 <TourItem
                   key={tour.id}
                   type={tour.type}
