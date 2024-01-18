@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { number, string, z } from "zod";
 
 import { getTours } from "../utils/api";
-import { PageBanner, TourItem, aboutBanner } from "../utils/helper";
+import { PageBanner, TourBooking, TourItem, tourBanner } from "../utils/helper";
 
 const TourSchema = z.object({
   id: number().optional(),
@@ -14,7 +14,7 @@ const TourSchema = z.object({
   type: string().min(5, { message: "Atleast have 5 characters." }),
   name: string().min(5, { message: "Atleast have 5 characters." }),
   price: number().gt(0, { message: "Price must be a positive number." }),
-  description: string().min(5, { message: "Atleast have 5 characters." }),
+  description1: string().min(5, { message: "Atleast have 5 characters." }),
 });
 
 export type TourProps = z.infer<typeof TourSchema>;
@@ -74,7 +74,7 @@ const Tours = () => {
     <main>
       <PageBanner
         page="Tours List"
-        imgSrc={aboutBanner}
+        imgSrc={tourBanner}
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur rem necessitatibus aut!"
       />
 
@@ -136,25 +136,29 @@ const Tours = () => {
         </div>
       </section>
 
-      <section aria-labelledby="tours">
-        <div className="container mx-auto flex flex-wrap items-center justify-between gap-8">
-          {status === "success"
-            ? filteredData?.map((tour: TourProps) => (
-                <TourItem
-                  key={tour.id}
-                  type={tour.type}
-                  name={tour.name}
-                  price={tour.price}
-                  guests={tour.guests}
-                  cabins={tour.cabins}
-                  imgSrc={tour.imgSrc}
-                  distance={tour.distance}
-                  description={tour.description}
-                />
-              ))
-            : null}
-        </div>
-      </section>
+      <div className="container mx-auto flex items-start justify-between gap-8">
+        <section aria-labelledby="tours" className="w-[70%]">
+          <div className="flex flex-wrap items-center justify-between gap-8">
+            {status === "success"
+              ? filteredData?.map((tour: TourProps) => (
+                  <TourItem
+                    key={tour.id}
+                    id={tour.id}
+                    type={tour.type}
+                    name={tour.name}
+                    price={tour.price}
+                    guests={tour.guests}
+                    cabins={tour.cabins}
+                    imgSrc={tour.imgSrc}
+                    distance={tour.distance}
+                    description1={tour.description1}
+                  />
+                ))
+              : null}
+          </div>
+        </section>
+        <TourBooking />
+      </div>
     </main>
   );
 };

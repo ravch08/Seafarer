@@ -21,3 +21,9 @@ export async function getTours() {
   const data = await response.json();
   return data;
 }
+
+export async function getTourDetail(id: number) {
+  const response = await fetch(`http://localhost:3000/tours/${id}`);
+  const data = await response.json();
+  return data;
+}

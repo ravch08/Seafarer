@@ -1,8 +1,8 @@
 import {
   PageBanner,
   SectionHeading,
-  aboutBanner,
   anchor,
+  contactBanner,
 } from "../utils/helper";
 
 const ContactUs = () => {
@@ -10,7 +10,7 @@ const ContactUs = () => {
     <main>
       <PageBanner
         page="Contact Us"
-        imgSrc={aboutBanner}
+        imgSrc={contactBanner}
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur rem necessitatibus aut!"
       />
       <section aria-labelledby="Contact" className="text-center">

@@ -14,6 +14,10 @@ import {
   Home,
   Layout,
   Page404,
+  TourDescription,
+  TourDetailLayout,
+  TourPlan,
+  TourReviews,
   Tours,
 } from "./components/utils/helper";
 import {
@@ -37,6 +41,11 @@ const router = createBrowserRouter(
       <Route index element={<Home />} loader={pricingLoader} />
       <Route path="about" element={<AboutUs />} loader={crewLoader} />
       <Route path="tours" element={<Tours />} loader={toursLoader} />
+      <Route path="tours/:id" element={<TourDetailLayout />}>
+        <Route index element={<TourDescription />} />
+        <Route path="plan" element={<TourPlan />} />
+        <Route path="reviews" element={<TourReviews />} />
+      </Route>
       <Route path="contact" element={<ContactUs />} />
       <Route path="*" element={<Page404 />} />
     </Route>,
