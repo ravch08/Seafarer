@@ -3,7 +3,13 @@ import { useSearchParams } from "react-router-dom";
 import { number, string, z } from "zod";
 
 import { getTours } from "../utils/api";
-import { PageBanner, TourBooking, TourItem, tourBanner } from "../utils/helper";
+import {
+  PageBanner,
+  TourBooking,
+  TourItem,
+  tourBanner,
+  tourSideBanner,
+} from "../utils/helper";
 
 const TourSchema = z.object({
   id: number().optional(),
@@ -157,7 +163,10 @@ const Tours = () => {
               : null}
           </div>
         </section>
-        <TourBooking bookingClass="w-[28%]" />
+        <div className="flex w-[28%] flex-col gap-8">
+          <TourBooking bookingClass="w-full" />
+          <img src={tourSideBanner} alt="sidebanner" className="rounded-md" />
+        </div>
       </div>
     </main>
   );

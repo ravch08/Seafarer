@@ -20,8 +20,8 @@ export { default as team1 } from "../../assets/team-1.jpg";
 export { default as team2 } from "../../assets/team-2.jpg";
 export { default as team3 } from "../../assets/team-3.jpg";
 export { default as team4 } from "../../assets/team-4.jpg";
+export { default as tourSideBanner } from "../../assets/tour-sideBanner.jpg";
 
-export { default as ContactForm } from "../features/ContactForm.tsx";
 export { default as CrewItem } from "../features/CrewItem.tsx";
 export { default as PricingItem } from "../features/PricingItem.tsx";
 export { default as SectionHeading } from "../features/SectionHeading.tsx";
