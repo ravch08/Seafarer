@@ -136,7 +136,7 @@ const Tours = () => {
         </div>
       </section>
 
-      <div className="container mx-auto flex items-start justify-between gap-8">
+      <div className="container relative mx-auto flex items-start justify-between gap-8">
         <section aria-labelledby="tours" className="w-[70%]">
           <div className="flex flex-wrap items-center justify-between gap-8">
             {status === "success"
@@ -157,7 +157,7 @@ const Tours = () => {
               : null}
           </div>
         </section>
-        <TourBooking />
+        <TourBooking bookingClass="w-[28%]" />
       </div>
     </main>
   );

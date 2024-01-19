@@ -2,15 +2,21 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { cn } from "@/lib/utils.ts";
-// import { CalendarIcon } from "@radix-ui/react-icons";
+import { TourBookingProps } from "@/types/types.ts";
 import { format } from "date-fns";
 import { Button } from "../ui/button.tsx";
 import { Calendar } from "../ui/calendar.tsx";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -20,14 +26,19 @@ import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover.tsx";
 
 const formSchema = z.object({
   checkIn: z.date({
-    required_error: "A date of birth is required.",
+    required_error: "A check-in date is required.",
   }),
   checkOut: z.date({
-    required_error: "A date of birth is required.",
+    required_error: "A check-out date is required.",
   }),
+  guests: z
+    .string({
+      required_error: "A guest count is required.",
+    })
+    .min(1, { message: "Atleast 1  guest is required!" }),
 });
 
-const TourBooking = () => {
+const TourBooking = ({ bookingClass }: TourBookingProps) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   });
@@ -37,8 +48,8 @@ const TourBooking = () => {
   }
 
   return (
-    <section aria-labelledby="Tour Booking Form" className="w-[28%]">
-      <div className="bg-secondary flex flex-col rounded-md px-8 py-8">
+    <section aria-labelledby="Tour Booking Form" className={bookingClass}>
+      <div className="flex flex-col rounded-md bg-secondary px-8 py-8">
         <h2 className="mb-8 text-center font-serif text-5xl">Book Tour</h2>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -93,9 +104,6 @@ const TourBooking = () => {
                       />
                     </PopoverContent>
                   </Popover>
-                  <FormDescription>
-                    This is your public display name.
-                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -151,9 +159,49 @@ const TourBooking = () => {
                       />
                     </PopoverContent>
                   </Popover>
-                  <FormDescription>
-                    This is your public display name.
-                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              name="guests"
+              control={form.control}
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-xs font-light uppercase tracking-widest">
+                    Guests
+                  </FormLabel>
+                  <Select
+                    defaultValue={field.value}
+                    onValueChange={field.onChange}
+                  >
+                    <SelectTrigger className="w-full ">
+                      <SelectValue placeholder="Guests" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="1">1</SelectItem>
+                      <SelectItem value="2">2</SelectItem>
+                      <SelectItem value="3">3</SelectItem>
+                      <SelectItem value="4">4</SelectItem>
+                      <SelectItem value="5">5</SelectItem>
+                      <SelectItem value="6">6</SelectItem>
+                      <SelectItem value="7">7</SelectItem>
+                      <SelectItem value="8">8</SelectItem>
+                      <SelectItem value="9">9</SelectItem>
+                      <SelectItem value="10">10</SelectItem>
+                      <SelectItem value="11">11</SelectItem>
+                      <SelectItem value="12">12</SelectItem>
+                      <SelectItem value="13">13</SelectItem>
+                      <SelectItem value="14">14</SelectItem>
+                      <SelectItem value="15">15</SelectItem>
+                      <SelectItem value="16">16</SelectItem>
+                      <SelectItem value="17">17</SelectItem>
+                      <SelectItem value="18">18</SelectItem>
+                      <SelectItem value="19">19</SelectItem>
+                      <SelectItem value="20">20</SelectItem>
+                    </SelectContent>
+                  </Select>
                   <FormMessage />
                 </FormItem>
               )}

@@ -10,3 +10,7 @@ export type PageBannerProps = {
   imgSrc: string;
   description: string;
 };
+
+export type TourBookingProps = {
+  bookingClass: string;
+};

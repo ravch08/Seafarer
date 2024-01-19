@@ -1,6 +1,7 @@
 import {
   PageBanner,
   SectionHeading,
+  TourBooking,
   anchor,
   contactBanner,
 } from "../utils/helper";
@@ -87,6 +88,7 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
+      <TourBooking bookingClass="w-[50%] mx-auto" />
     </main>
   );
 };
