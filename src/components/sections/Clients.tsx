@@ -86,6 +86,20 @@ const Clients = () => {
               className="transition-transform duration-300 ease-in-out hover:-translate-y-2"
             />
           </SwiperSlide>
+          <SwiperSlide className="flex items-center justify-center">
+            <img
+              src={client2}
+              alt="client"
+              className="transition-transform duration-300 ease-in-out hover:-translate-y-2"
+            />
+          </SwiperSlide>
+          <SwiperSlide className="flex items-center justify-center">
+            <img
+              src={client5}
+              alt="client"
+              className="transition-transform duration-300 ease-in-out hover:-translate-y-2"
+            />
+          </SwiperSlide>
         </Swiper>
       </div>
     </section>

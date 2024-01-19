@@ -59,7 +59,10 @@ function App() {
     <themeContext.Provider value={{ darkTheme, setDarkTheme }}>
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
-        <ReactQueryDevtools initialIsOpen={false} />
+        <ReactQueryDevtools
+          initialIsOpen={false}
+          buttonPosition="bottom-left"
+        />
       </QueryClientProvider>
     </themeContext.Provider>
   );

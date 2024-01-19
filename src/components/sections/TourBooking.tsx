@@ -45,6 +45,7 @@ const TourBooking = ({ bookingClass }: TourBookingProps) => {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
+    form.reset();
   }
 
   return (

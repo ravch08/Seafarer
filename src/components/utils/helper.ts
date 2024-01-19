@@ -24,6 +24,7 @@ export { default as tourSideBanner } from "../../assets/tour-sideBanner.jpg";
 
 export { default as CrewItem } from "../features/CrewItem.tsx";
 export { default as PricingItem } from "../features/PricingItem.tsx";
+export { default as ScrollTop } from "../features/ScrollTop.tsx";
 export { default as SectionHeading } from "../features/SectionHeading.tsx";
 export { default as SocailIcons } from "../features/SocailIcons.tsx";
 export { default as TourItem } from "../features/TourItem.tsx";
@@ -48,6 +49,5 @@ export { default as ContactUs } from "../pages/ContactUs.tsx";
 export { default as Home } from "../pages/Home.tsx";
 export { default as Layout } from "../pages/Layout.tsx";
 export { default as Page404 } from "../pages/Page404.tsx";
-export { default as TourDetail } from "../pages/TourDetail.tsx";
 export { default as TourDetailLayout } from "../pages/TourDetailLayout.tsx";
 export { default as Tours } from "../pages/Tours.tsx";

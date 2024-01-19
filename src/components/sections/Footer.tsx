@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SocailIcons, logoLight } from "../utils/helper";
+import { ScrollTop, SocailIcons, logoLight } from "../utils/helper";
 
 const Footer = () => {
   return (
@@ -80,6 +80,7 @@ const Footer = () => {
           </form>
         </div>
       </div>
+      <ScrollTop />
     </footer>
   );
 };

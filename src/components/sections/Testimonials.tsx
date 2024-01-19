@@ -38,8 +38,8 @@ const Testimonials = () => {
         </div>
 
         <Swiper
-          loop={true}
-          speed={1500}
+          loop={false}
+          speed={1000}
           spaceBetween={30}
           grabCursor={true}
           slidesPerView={1}
